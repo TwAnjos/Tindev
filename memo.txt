@@ -1,0 +1,13 @@
+
+Video2
+Parado em 48:49
+
+app utilizados:
+yarn
+Chocolate
+nodemon
+MongoDB
+mongoose    
+Insomnia
+MVC
+axios

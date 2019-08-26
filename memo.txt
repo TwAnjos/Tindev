@@ -1,6 +1,7 @@
 
 Video2
 Parado em 48:49
+deu erro em 49:16
 
 app utilizados:
 yarn

@@ -16,12 +16,13 @@ module.exports = {
         // ao utilizar o await, utilize tbm o async nesse objeto
         //const responseOfAxios = await axios.get(`https://api.github.com/users/${testeUsername}`); 
         const responseOfAxios = await axios.get(`https://api.github.com/users/${username}`); //OBS: demora um tempo pra existir
+        console.log(`https://api.github.com/users/${username}`);
 
         //pegando informações da api pelo url
         const { name, bio : biography, avatar_url : avatar   } = responseOfAxios.data;
                     //"bio nick biography"
         //populando o objeto pra poder persistir
-        await Dev.create({
+        const dev = await Dev.create({
             name,
             user : username,
             biography,
@@ -29,10 +30,9 @@ module.exports = {
             //id: id
         });
 
-
-
-        //return res.json({ ok: true});
-        return res.json(responseOfAxios.data);
+        //return res.json({ ok: true}); teste1
+        //return res.json(responseOfAxios.data); teste2
+        return res.json(dev);
     }
 };
 //importar isso em heim routes

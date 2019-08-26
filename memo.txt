@@ -1,6 +1,6 @@
 
 Video2
-Parado em 49:16
+Parado em 53:20
 
 deu erro em 49:16
 1- O erro "license" aconceteu pq eu instalei a dependecia axios na pasta raiz do projeto.
@@ -11,6 +11,7 @@ yarn
 Chocolate
 nodemon
 MongoDB
+mongoDB compass community
 mongoose    
 Insomnia
 MVC

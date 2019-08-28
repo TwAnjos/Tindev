@@ -1,6 +1,6 @@
 
 Video2
-Parado em 53:20
+Parado em 01:03:00
 
 deu erro em 49:16
 1- O erro "license" aconceteu pq eu instalei a dependecia axios na pasta raiz do projeto.

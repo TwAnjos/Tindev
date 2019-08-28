@@ -1,3 +1,11 @@
+//Boas praticas
+// 5 METODOS FUNDAMENTAIS 
+// maximo de metodos dentro de um controle são:
+//INDEX: lista do recurso.
+//SHOW: retorno único de recurso.
+//STORE:
+//DELETE:
+
 const axios = require('axios');
 const Dev = require('../models/Dev'); //impotardo pra persistir no db
 

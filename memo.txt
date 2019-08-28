@@ -1,6 +1,6 @@
 
-Video2
-Parado em 01:03:00
+Video0
+Parado em 00:00
 
 deu erro em 49:16
 1- O erro "license" aconceteu pq eu instalei a dependecia axios na pasta raiz do projeto.
@@ -16,3 +16,9 @@ mongoose
 Insomnia
 MVC
 axios
+cors
+
+link do db:
+mongodb+srv://contateste:<password>@twdb-5oztg.mongodb.net/test
+
+poderia ter utilizado o git ignore, mas não quis

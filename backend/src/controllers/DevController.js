@@ -10,9 +10,36 @@ const axios = require('axios');
 const Dev = require('../models/Dev'); //impotardo pra persistir no db
 
 module.exports = {
+
+    //Metodo index para listagens
+    //trazer usuários do db 
+    async index(req, res){
+        //primeiro pegar usuário logado
+        const { user } = req.headers;   //id do usuário loggado
+        const  loggedDev = await Dev.findById(user); //tenho todos os dados que estavam salvo no db do meu usuário logado
+
+        //buscar no db todos os usuários que:
+        // não são estão logado
+        // não é usuário que o logado ja deu like
+        // não é usuário que o logado ja deu dislike
+        const users = await Dev.find({ //add todos os filtros aqui...
+            //filtro AND, ou seja tem que ter os 3 filtros verdadeiros
+            $and: [ //dentro do mongo
+                { _id: { $ne: user } }, //$ne = not equal = !=
+                { _id: { $nin: loggedDev.likes } }, // $nin = not in = não ta na lista
+                { _id: { $nin: loggedDev.dislikes } }, // tras os user que não estão na lista
+            ],
+        });
+        return res.json(users);
+    },
+
+
+    //esse metodo serviu apenas para teste mesmo
     teste(req, res){
         return res.json({ ok: true});   // esse return serviu apenas para teste
     },
+
+
     async store(req, res){
         console.log("storing... "+req.body.username);
 

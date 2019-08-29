@@ -14,6 +14,8 @@ module.exports = {
     //Metodo index para listagens
     //trazer usuários do db 
     async index(req, res){
+        var data = new Date();
+        console.log("Listando Devs "+data.getHours()+":"+data.getMinutes()+":"+data.getSeconds()+","+data.getMilliseconds());
         //primeiro pegar usuário logado
         const { user } = req.headers;   //id do usuário loggado
         const  loggedDev = await Dev.findById(user); //tenho todos os dados que estavam salvo no db do meu usuário logado
@@ -30,6 +32,8 @@ module.exports = {
                 { _id: { $nin: loggedDev.dislikes } }, // tras os user que não estão na lista
             ],
         });
+        data = new Date();
+        console.log("Devs Listado "+data.getHours()+":"+data.getMinutes()+":"+data.getSeconds()+","+data.getMilliseconds());
         return res.json(users);
     },
 

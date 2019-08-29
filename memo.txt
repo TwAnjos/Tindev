@@ -1,6 +1,6 @@
 
-Video0
-Parado em 00:00
+Video3
+Parado em 12:52
 
 deu erro em 49:16
 1- O erro "license" aconceteu pq eu instalei a dependecia axios na pasta raiz do projeto.
@@ -17,8 +17,21 @@ Insomnia
 MVC
 axios
 cors
+react js
 
 link do db:
 mongodb+srv://contateste:<password>@twdb-5oztg.mongodb.net/test
 
-poderia ter utilizado o git ignore, mas não quis
+Anotaçãoes de comandos basicos:
+yarn create react-app frontend
+yarn start "pro frontend"
+
+Extenções do Visual Studio Code:
+Bracket Pair Colorizer
+Color Highlight
+Color Picker
+Debugger for Chrome
+Dracula Official
+Material Icon Theme
+Rocketseat React Native
+Rocketseat ReactJS

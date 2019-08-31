@@ -8,7 +8,7 @@ deu erro em 49:16
 
 app utilizados:
 yarn
-Chocolate
+chocolatey
 nodemon
 MongoDB
 mongoDB compass community
@@ -35,3 +35,37 @@ Dracula Official
 Material Icon Theme
 Rocketseat React Native
 Rocketseat ReactJS
+
+Installs:
+
+chocolatey
+execute o comando abaixo no prompt de comando do windows com perminssão de administrador:
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+yarn
+choco install yarn
+
+nodemon
+npm install --save-dev nodemon
+//--save-dev  faz uma instalação somente para o local
+
+mongoose
+yarn add mongoose
+/*ou*/ npm install mongoose
+
+axios
+yarn add axios
+//npm install axios
+
+cors
+yarn add cors
+
+mongoDB compass community
+https://www.mongodb.com/download-center/compass
+
+Insomnia
+https://insomnia.rest/download/
+
+Comandos:
+
+choco -v    // informa a versão

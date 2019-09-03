@@ -1,6 +1,6 @@
 
 Video3
-Parado em 12:52
+Parado em 13:30
 
 deu erro em 49:16
 1- O erro "license" aconceteu pq eu instalei a dependecia axios na pasta raiz do projeto.
@@ -69,3 +69,6 @@ https://insomnia.rest/download/
 Comandos:
 
 choco -v    // informa a versão
+
+backend = yarn tw
+front   = yarn start

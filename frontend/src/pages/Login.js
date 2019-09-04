@@ -7,7 +7,13 @@ import logodotinder from '../assets/tinder.svg';
 //opção 2 simplificado
 export default function Login(){
     return (
-        <img src={logodotinder} alt="Tinder Logo"/>
+        <div className="login-container">
+            <form>
+                <img src={logodotinder} alt="Tinder Logo"/>
+                <input placeholder="Digite seu usuário no Github"/>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     );
 }
 

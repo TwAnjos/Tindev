@@ -15,7 +15,7 @@ mongoDB compass community
 mongoose    
 Insomnia
 MVC
-axios
+axios (instalado no backend e frontend)
 cors
 react js
 react-router-dom
@@ -57,6 +57,7 @@ yarn add mongoose
 
 axios
 yarn add axios
+//foi instalado na pasta do backend e do frontend
 //npm install axios
 
 cors

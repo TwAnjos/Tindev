@@ -6,6 +6,8 @@ import './Login.css';   //não preciso informar uma variavel se não precisar tr
 
 import logodotinder from '../assets/tinder.svg';
 
+import api from '../services/api';
+
 //opção 2 simplificado
 export default function Login( { history }){  //history sempre é herdado automaticamente
 
@@ -15,13 +17,27 @@ export default function Login( { history }){  //history sempre é herdado automa
     //o setUsername deve ser utilizado quando precisar modificar o conteudo de user name;
     const [username, setUsername] = useState('');
 
-    //função para testar
+    /*função para testar
     function handleSubmit(event){
         event.preventDefault();
         console.log(username);
         console.log("History = "+history.value);
         history.push('/main'); // esse cara aqui faz o redirecionamento pra qualquer pagina /main 
     }
+    */
+
+    async function handleSubmit(event){
+    event.preventDefault();
+
+    const response = await api.post('/devs',
+    {
+        //username : username //deveria ser assim, mas é permitido fazer isso tbm como short sitanx ja que possuem os mesmos nomes.
+    });
+
+    console.log(username);
+    console.log("History = "+history.value);
+    history.push('/main'); // esse cara aqui faz o redirecionamento pra qualquer pagina /main 
+}
 
 
 

@@ -2,7 +2,7 @@
 Video3
 Parado em 43:00
 
-deu erro em 49:16
+deu erro em 49:16 video2
 1- O erro "license" aconceteu pq eu instalei a dependecia axios na pasta raiz do projeto.
 2- A contateste não tinha perminssão para escrever no MongoDB.
 

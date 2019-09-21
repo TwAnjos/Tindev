@@ -12,7 +12,7 @@ server.use(cors());
 server.use(express.json()); // informa ao Express que ele precisa tratar as requisições POST com JSON
 server.use(routes); // o use serve pra indicar que vc quer usar uma outra configuração, nesse caso de routas que está no arquivo de routes.js
 
-server.listen(3333); // permite que o servidor aceito requisições no navegador com "localhost:3333"
+server.listen(3333); // permite que o servidor aceite requisições no navegador com "localhost:3333"
 
 // Arquitetura MVC
 // M - Model (Abstração da estrutura do db)

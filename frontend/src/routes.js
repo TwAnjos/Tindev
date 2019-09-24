@@ -10,8 +10,12 @@ export default function Routes(){
         // o exact serva para fazer com que o react não compare somente o primeiro caracteres em relação a barra de endereços.
         <BrowserRouter>
             <Route path="/" exact component={Login}  /> 
-            <Route path="/main" component={Main}  />
+            <Route path="/dev/:id" component={Main}  />
         </BrowserRouter>
+        /*old
+        <Route path="/main" component={Main}  /> ---> <Route path="/dev/:id" component={Main}  />
+
+        */
     );
 }
 

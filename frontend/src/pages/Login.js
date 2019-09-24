@@ -27,17 +27,22 @@ export default function Login( { history }){  //history sempre é herdado automa
     */
 
     async function handleSubmit(event){
-    event.preventDefault();
+        event.preventDefault();
 
-    const response = await api.post('/devs',
-    {
-        //username : username //deveria ser assim, mas é permitido fazer isso tbm como short sitanx ja que possuem os mesmos nomes.
-    });
+        const response = await api.post('/devs',
+        {
+            //username : username //deveria ser assim, mas é permitido fazer isso tbm como short sitanx ja que possuem os mesmos nomes.
+            username,
+        });
 
-    console.log(username);
-    console.log("History = "+history.value);
-    history.push('/main'); // esse cara aqui faz o redirecionamento pra qualquer pagina /main 
-}
+        const { _id } = response.data
+
+        console.log(username);
+        console.log(response);
+        console.log("History = "+history.value);
+        //history.push('/main'); // esse cara aqui faz o redirecionamento pra qualquer pagina /main 
+        history.push(`/dev/${_id}`);
+    }
 
 
 

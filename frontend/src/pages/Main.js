@@ -1,5 +1,9 @@
 import React from 'react';
+import './Main.css';
+
 import logo from '../assets/tinder.svg';
+import dislike from "../assets/dislike.svg";
+import like from "../assets/like.svg";
 
 export default function Main( { match }){
     //o { match } é uma propriedade do react router DOM.
@@ -12,15 +16,156 @@ export default function Main( { match }){
         <div className="main-container">
             <img src={logo} alt="Tindev"/>
 
+
+            
             <ul>
+                {/* PlaceHolder User */}
                 <li>
                     <img src="https://avatars2.githubusercontent.com/u/34012035?v=4" alt=""/>
                     <footer>
-                        <strong>Tw Thiago</strong>
-                        <p> Teste de conta </p>
+                        <strong>Nome do User</strong>
+                        <p>Descrição do User</p>
                     </footer>
+                    <div className="buttons">
+                        <button type="button">
+                            <img src={dislike} alt="Dislike"/>
+                        </button>
+                        <button type="button">
+                            <img src={like} alt="like"/>
+                        </button>
+                    </div>
                 </li>
+                {/* Fim PlaceHolder User */}
+
+                {/* PlaceHolder User */}
+                <li>
+                    <img src="https://avatars2.githubusercontent.com/u/34012035?v=4" alt=""/>
+                    <footer>
+                        <strong>Nome do User</strong>
+                        <p>Descrição do User</p>
+                    </footer>
+                    <div className="buttons">
+                        <button type="button">
+                            <img src={dislike} alt="Dislike"/>
+                        </button>
+                        <button type="button">
+                            <img src={like} alt="like"/>
+                        </button>
+                    </div>
+                </li>
+                {/* Fim PlaceHolder User */}
+
+                {/* PlaceHolder User */}
+                <li>
+                    <img src="https://avatars2.githubusercontent.com/u/34012035?v=4" alt=""/>
+                    <footer>
+                        <strong>Nome do User</strong>
+                        <p>Descrição do User</p>
+                    </footer>
+                    <div className="buttons">
+                        <button type="button">
+                            <img src={dislike} alt="Dislike"/>
+                        </button>
+                        <button type="button">
+                            <img src={like} alt="like"/>
+                        </button>
+                    </div>
+                </li>
+                {/* Fim PlaceHolder User */}
+
+                {/* PlaceHolder User */}
+                <li>
+                    <img src="https://avatars2.githubusercontent.com/u/34012035?v=4" alt=""/>
+                    <footer>
+                        <strong>Nome do User</strong>
+                        <p>Descrição do User</p>
+                    </footer>
+                    <div className="buttons">
+                        <button type="button">
+                            <img src={dislike} alt="Dislike"/>
+                        </button>
+                        <button type="button">
+                            <img src={like} alt="like"/>
+                        </button>
+                    </div>
+                </li>
+                {/* Fim PlaceHolder User */}
+
+                {/* PlaceHolder User */}
+                <li>
+                    <img src="https://avatars2.githubusercontent.com/u/34012035?v=4" alt=""/>
+                    <footer>
+                        <strong>Nome do User</strong>
+                        <p>Descrição do User</p>
+                    </footer>
+                    <div className="buttons">
+                        <button type="button">
+                            <img src={dislike} alt="Dislike"/>
+                        </button>
+                        <button type="button">
+                            <img src={like} alt="like"/>
+                        </button>
+                    </div>
+                </li>
+                {/* Fim PlaceHolder User */}
+
+                {/* PlaceHolder User */}
+                <li>
+                    <img src="https://avatars2.githubusercontent.com/u/34012035?v=4" alt=""/>
+                    <footer>
+                        <strong>Nome do User</strong>
+                        <p>Descrição do User</p>
+                    </footer>
+                    <div className="buttons">
+                        <button type="button">
+                            <img src={dislike} alt="Dislike"/>
+                        </button>
+                        <button type="button">
+                            <img src={like} alt="like"/>
+                        </button>
+                    </div>
+                </li>
+                {/* Fim PlaceHolder User */}
+
+                {/* PlaceHolder User */}
+                <li>
+                    <img src="https://avatars2.githubusercontent.com/u/34012035?v=4" alt=""/>
+                    <footer>
+                        <strong>Nome do User</strong>
+                        <p>Descrição do User</p>
+                    </footer>
+                    <div className="buttons">
+                        <button type="button">
+                            <img src={dislike} alt="Dislike"/>
+                        </button>
+                        <button type="button">
+                            <img src={like} alt="like"/>
+                        </button>
+                    </div>
+                </li>
+                {/* Fim PlaceHolder User */}
+
+                {/* PlaceHolder User */}
+                <li>
+                    <img src="https://avatars2.githubusercontent.com/u/34012035?v=4" alt=""/>
+                    <footer>
+                        <strong>Nome do User</strong>
+                        <p>Descrição do User</p>
+                    </footer>
+                    <div className="buttons">
+                        <button type="button">
+                            <img src={dislike} alt="Dislike"/>
+                        </button>
+                        <button type="button">
+                            <img src={like} alt="like"/>
+                        </button>
+                    </div>
+                </li>
+                {/* Fim PlaceHolder User */}
             </ul>
+            
+
+            
 
         </div>
     )

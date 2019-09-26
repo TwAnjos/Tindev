@@ -63,5 +63,5 @@
 /* Efeito baitinha no botão*/
 .main-container ul li .buttons button:hover img{
     transform: translateY(-5px);
-    transition: all 0.2s; 
+    transition: all 1.2s; 
 }

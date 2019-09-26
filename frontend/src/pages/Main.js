@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Main.css';
+
+import api from '../services/api';
 
 import logo from '../assets/tinder.svg';
 import dislike from "../assets/dislike.svg";
@@ -9,6 +11,25 @@ export default function Main( { match }){
     //o { match } é uma propriedade do react router DOM.
     // essa propriedade o "match" eu posso pegar todos os parametros que foram disponibilizados pra essa rota
     // nesse exemplo eu só tenho o _id que foi passado como parametro de login.js 
+
+    useEffect(() => 
+        {
+            async function loadUser()
+            {
+                const response = await api.get('/devs', {
+                    headers: {
+                        user: match.params.id,
+                    }
+                });
+            }
+            loadUser();
+        }, 
+        [
+            match.params.id
+        ]
+    )
+
+
 
     //Exemplo:
     // return <h1>Pagina MAIN - Exemplo: {match.params.id} </h1>

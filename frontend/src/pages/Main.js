@@ -37,6 +37,16 @@ export default function Main( { match }){
         ]
     )
 
+        //Like do usuário
+        async function handleLike(id){
+            console.log('Like ',id);
+        }
+
+        //Dislike do usuário
+        async function handleDisLike(id){
+            console.log('DisLike ',id);
+        }
+
 
 
     //Exemplo:
@@ -59,10 +69,10 @@ export default function Main( { match }){
                             <p>{u.biography}</p>
                         </footer>
                         <div className="buttons">
-                            <button type="button">
+                            <button type="button"  onClick={() => handleDisLike(u._id)}>
                                 <img src={dislike} alt="Dislike"/>
                             </button>
-                            <button type="button">
+                            <button type="button" onClick={() => handleLike(u._id)}>
                                 <img src={like} alt="like"/>
                             </button>
                         </div>

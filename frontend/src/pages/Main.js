@@ -15,7 +15,8 @@ export default function Main( { match }){
 
     //cadastrando o estado:
     const [users, setUsers] = useState([]);
-
+    //não da pra alterar a variavel users diretamente
+    //pra edirar o conteudo de users utilize o setUsers.
 
     //faz a chamada da api
     useEffect(() => 
@@ -44,7 +45,24 @@ export default function Main( { match }){
 
         //Dislike do usuário
         async function handleDisLike(id){
-            console.log('DisLike ',id);
+            
+            try {
+                await api.post(
+                    `/devs/${id}/dislikes`,
+                    null/*{body: objeto/variavel}Este espaço é reservado para o BODY*/,
+                    {headers: { user: match.params.id}/*Este espaço é reservado para o HEADER*/});
+                console.log('DisLike ',id);
+            } catch (error) {
+                alert('Erro: '+error);
+            }
+            
+
+            //função pra atualizar a pagina depois do dislike
+            //some com o item depois de clicado em dislike
+            setUsers(users.filter(
+                user => user._id != id //
+            ));
+            console.log('Remove user of list' ,id);
         }
 
 
@@ -55,13 +73,18 @@ export default function Main( { match }){
         <div className="main-container">
             <img src={logo} alt="Tindev"/>
  
-            <ul>
+            
+            {/* if ternário */}
+            { user.length > 0 ? (
+
+                <ul>
                 {/* Incluindo ´código javascritp por aqui:
-                Esse códido percorre todo o array users e imprime na tela.
+                    Esse códido percorre todo o array users e imprime na tela.
                 */}
+
                 {users.map( u => (
                     /* PlaceHolder User */
-                    <li key={u._id}>
+                    <li key={u._id}>   {/* o Primeiro elemento do map tem que ter uma key pra ele poder identificar e renderizar o necessãrio */}
                         {/*<img src="https://avatars2.githubusercontent.com/u/34012035?v=4" alt=""/>*/}
                         <img src={u.avatar} alt={u.name}/>
                         <footer>
@@ -69,21 +92,23 @@ export default function Main( { match }){
                             <p>{u.biography}</p>
                         </footer>
                         <div className="buttons">
-                            <button type="button"  onClick={() => handleDisLike(u._id)}>
+                            <button type="button"  onClick={ () => handleDisLike(u._id) }> {/* Tem que ser assim mesmo pro react funcionar certinho  ={()=> função(parametro)} */}
                                 <img src={dislike} alt="Dislike"/>
                             </button>
-                            <button type="button" onClick={() => handleLike(u._id)}>
+                            <button type="button" onClick={ () => handleLike(u._id)} >
                                 <img src={like} alt="like"/>
                             </button>
                         </div>
                     </li>
                     /* Fim PlaceHolder User */
                 ))}
+                </ul>
+                
+            ) : }
 
-            </ul>
+            
             
         </div>
     )
 }
-
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Main.css';
 
 import api from '../services/api';
@@ -40,12 +41,26 @@ export default function Main( { match }){
 
         //Like do usuário
         async function handleLike(id){
-            console.log('Like ',id);
+            try {
+                await api.post(
+                    `/devs/${id}/likes`,
+                    null/*{body: objeto/variavel}Este espaço é reservado para o BODY*/,
+                    {headers: { user: match.params.id}/*Este espaço é reservado para o HEADER*/});
+                console.log('Like ',id);
+            } catch (error) {
+                alert('Erro: '+error);
+            }
+
+            //função pra atualizar a pagina depois do dislike
+            //some com o item depois de clicado em like
+            setUsers(users.filter(
+                user => user._id !== id //
+            ));
+            console.log('Remove user da list' ,id);
         }
 
         //Dislike do usuário
         async function handleDisLike(id){
-            
             try {
                 await api.post(
                     `/devs/${id}/dislikes`,
@@ -55,12 +70,11 @@ export default function Main( { match }){
             } catch (error) {
                 alert('Erro: '+error);
             }
-            
 
             //função pra atualizar a pagina depois do dislike
             //some com o item depois de clicado em dislike
             setUsers(users.filter(
-                user => user._id != id //
+                user => user._id !== id //
             ));
             console.log('Remove user of list' ,id);
         }
@@ -71,11 +85,11 @@ export default function Main( { match }){
     // return <h1>Pagina MAIN - Exemplo: {match.params.id} </h1>
     return (
         <div className="main-container">
-            <img src={logo} alt="Tindev"/>
- 
-            
+            <Link to='/'>
+                <img src={logo} alt="Tindev" title="Clique para voltar para a tela de Login."/>
+            </Link>
             {/* if ternário */}
-            { user.length > 0 ? (
+            { users.length > 0 ? (
 
                 <ul>
                 {/* Incluindo ´código javascritp por aqui:
@@ -89,6 +103,7 @@ export default function Main( { match }){
                         <img src={u.avatar} alt={u.name}/>
                         <footer>
                             <strong>{u.name}</strong>
+                            <p>{u.user}</p>
                             <p>{u.biography}</p>
                         </footer>
                         <div className="buttons">
@@ -104,9 +119,9 @@ export default function Main( { match }){
                 ))}
                 </ul>
                 
-            ) : }
-
-            
+            ) : (
+                <div className="empty"> Esperando novos participantes...</div>
+            ) }
             
         </div>
     )

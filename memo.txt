@@ -1,6 +1,7 @@
 ﻿
 Video4
-Parado em 00
+Parado em 07:00
+tava tentando fazer rodar pelo celular mas deu erro.
 
 deu erro em 49:16 video2
 1- O erro "license" aconceteu pq eu instalei a dependecia axios na pasta raiz do projeto.
@@ -19,6 +20,8 @@ axios (instalado no backend e frontend)
 cors
 react js
 react-router-dom
+react-native 
+
 Sketch desenho de interface
 
 link do db:
@@ -37,6 +40,7 @@ Dracula Official
 Material Icon Theme
 Rocketseat React Native
 Rocketseat ReactJS
+Gradle
 
 Installs:
 
@@ -72,7 +76,8 @@ https://insomnia.rest/download/
 react-router-dom (na pasta frontend)
 yarn add react-router-dom
 
-
+"o mobile ali é o nome da pasta criada originalmente como tindev, mas eu achei melhor abstrair pra mobile mesmo"
+npx react-native init mobile   
 
 
 Comandos:
@@ -82,6 +87,14 @@ choco -v    // informa a versão
 backend = yarn tw
 front   = yarn start
 
+yarn react-native run-android
+yarn react-native run-ios
 
+
+obs:
 Note that the development build is not optimized.
 To create a production build, use: npm run build.
+
+Variavel do sistema
+JAVA_HOME
+C:\Program Files\Java\jdk-12.0.2\

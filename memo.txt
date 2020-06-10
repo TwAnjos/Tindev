@@ -34,13 +34,14 @@ yarn start "pro frontend"
 Extenções do Visual Studio Code:
 Bracket Pair Colorizer
 Color Highlight
-Color Picker
+vs Color Picker
 Debugger for Chrome
 Dracula Official
 Material Icon Theme
 Rocketseat React Native
 Rocketseat ReactJS
 Gradle
+Live server
 
 Installs:
 
